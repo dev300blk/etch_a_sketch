@@ -10,7 +10,7 @@ body{
     
     width: 400px;
     height: 400px;
-    border: solid black 1px;
+    border: solid rgb(3, 245, 193) 1px;
    display: inline-grid;
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -18,9 +18,14 @@ body{
 }
 
 .cell{
-    border: solid rgb(207, 55, 55) 1px;
+    border: solid rgb(55, 207, 169) .2px;
     margin: 0;
    width: 20px;
    height: 20px;
    box-sizing: border-box;
+}
+
+
+.cell2{
+    background-color: black;
 }
