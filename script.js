@@ -3,33 +3,24 @@ const resetbtn = document.querySelector('.resetbtn');
 
 
 
-// mouseover
+function createElement() {
+        for (let i = 0; i < 400; i++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                board.appendChild(cell);
+                cell.addEventListener('mouseover', () => {
+                        cell.classList.add('cell2');
+                })
+        }
+}
+createElement();
 
 
-
-// reset event
 resetbtn.addEventListener('click',()=>{
-console.log('click')
-fill();
-
-})
-
-// fills board with empty cells
-function fill(){
-function createElement(){
-   const cell =  document.createElement('div');
-   cell.classList.add('cell');
-   board.appendChild(cell);
-   cell.addEventListener('mouseover',()=>{
-   cell.classList.add('cell2');
-   })
-}
-
-for(i=0;i<400;i++){
-   // console.log(i);
-   createElement();
-  
-}
-}
+        for(let i = 0; i < 400; i++){
+        board.removeChild(board.lastElementChild);
+        }
+        createElement();
+});
 
 
