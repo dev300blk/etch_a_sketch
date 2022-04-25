@@ -1,4 +1,11 @@
-body{
+:root {
+    --rowNum: 125;
+    --colNum: 125;
+    --cellH: 4.8px;
+    --cellW: 4.8px;
+}
+
+body {
     background-color: rgb(109, 235, 235);
     display: flex;
     flex-direction: column;
@@ -6,26 +13,30 @@ body{
     align-items: center;
 }
 
-.container{
-    
-    width: 400px;
-    height: 400px;
+.container {
+    width: 600px;
+    height: 600px;
     border: solid rgb(3, 245, 193) 1px;
-   display: inline-grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-   
+    display: grid;
+    grid-template-columns: repeat(var(--colNum), var(--cellH));
+    grid-template-rows: repeat(var(--rowNum), var(var(--cellW)));
+
 }
 
-.cell{
-    border: solid rgb(109, 235, 235) .2px;
+ .cell { 
+    /* border: solid rgb(145, 236, 236) .2px;  */
     margin: 0;
-   width: 20px;
-   height: 20px;
-   box-sizing: border-box;
+
+    box-sizing: border-box;
+
+    grid-column-start: auto;
+    grid-row-start: auto;
+    /* margin: 0px; */
+
 }
 
 
-.cell2{
+.cell2 {
     background-color: black;
+    
 }
