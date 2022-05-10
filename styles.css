@@ -1,8 +1,8 @@
 :root {
-    --rowNum: 125;
-    --colNum: 125;
-    --cellH: 4.8px;
-    --cellW: 4.8px;
+    --rowNum: 50;
+    --colNum: 50;
+    --cellH: auto;
+    --cellW: auto;
 }
 
 body {
@@ -19,14 +19,14 @@ body {
     border: solid rgb(3, 245, 193) 1px;
     display: grid;
     grid-template-columns: repeat(var(--colNum), var(--cellH));
-    grid-template-rows: repeat(var(--rowNum), var(var(--cellW)));
+    grid-template-rows: repeat(var(--rowNum), var(var(--cellw)));
 
 }
 
  .cell { 
     /* border: solid rgb(145, 236, 236) .2px;  */
     margin: 0;
-
+    border-radius: 50% script;
     box-sizing: border-box;
 
     grid-column-start: auto;
